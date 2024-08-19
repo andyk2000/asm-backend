@@ -4,11 +4,28 @@
   "description": "backend application of assm system",
   "main": "index.js",
   "scripts": {
+    "build": "npx tsc",
+    "start": "node dist/index.js",
+    "dev": "nodemon index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "andy",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "eslint": "^9.9.0",
+    "express": "^4.19.2",
+    "husky": "^9.1.4",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.5.3",
+    "nodemon": "^3.1.4",
+    "prettier": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.5.4"
   }
 }
