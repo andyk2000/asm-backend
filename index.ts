@@ -1,5 +1,6 @@
 import express, { Express, Request, Response , Application } from 'express';
 import dotenv from 'dotenv';
+import mongoose from 'mongoose';
 
 dotenv.config();
 
@@ -13,3 +14,11 @@ app.get('/', (req: Request, res: Response) => {
 app.listen(port, () => {
   console.log(`Server is Fire at http://localhost:${port}`);
 });
+
+mongoose.connect("mongodb+srv://adk:Amdy300@cluster0.sazjv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0").then(
+    () => {
+        console.log("connected to database");
+    }
+).catch(() => {
+    console.log("connection failed");
+})
