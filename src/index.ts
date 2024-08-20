@@ -9,10 +9,6 @@ const port = process.env.PORT || 8000;
 const dbName = process.env.DATABASE_NAME || "ADMIN";
 const dbPassword = process.env.DATABASE_PASSWORD || "*****";
 
-app.get("/", (req: Request, res: Response) => {
-  res.send("Welcome to Express & TypeScript Server");
-});
-
 app.listen(port, () => {
   console.log(`Server is Fire at http://localhost:${port}`);
 });
